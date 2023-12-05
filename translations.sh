@@ -8,6 +8,7 @@ function serve_book() {
     # Rebuild english version, updating the `messages.pot` file where all chunks of texts
     # to be translated are extracted.
     MDBOOK_OUTPUT='{"xgettext": {"pot-file": "messages.pot"}}' \
+function serve_book() 
         mdbook build -d po
 
     fix_pot
